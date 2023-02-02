@@ -1,10 +1,23 @@
-// Mencoba Console
-console.debug("Ini adalah console debug")
+// Membuat Array
+const Array = []
+const name = ["Farhan", "Yp", "Farhan Yp"]
 
-console.info("Ini adalah console info")
+// Memasukan data
+Array.push("masukan1")
+Array.push("masukan2")
+Array.push("masukan3")
+Array.push("masukan4")
 
-console.warn("Ini adalah console warning")
+// Melihat panjang array
+document.writeln(Array.length)
 
-console.error("Ini adalah console error")
+// Mengambil data array
+document.writeln(Array[1])
 
-// console.table("Ini adalah console table")
+// Mengganti data di array
+Array[3] = 'Ini diganti '
+
+// Menghapus data di array
+delete Array[1]
+
+console.table(Array)
