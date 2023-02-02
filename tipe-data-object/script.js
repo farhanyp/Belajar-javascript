@@ -5,6 +5,9 @@ const person = {
     age: 22
 }
 
+// Mengubah isi property object
+person["name"] = "Yp"
+
 console.log(person.name)
 console.table(person)
 
