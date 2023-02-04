@@ -1,5 +1,7 @@
 // Menggunakan for in 
 
+// Perulangan ini menghasilkan return value yaitu index
+
 const names = {
     firstname : 'Farhan',
     middlename : 'Yudha',
