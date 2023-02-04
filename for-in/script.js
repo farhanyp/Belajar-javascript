@@ -1,6 +1,6 @@
 // Menggunakan for in 
 
-// Perulangan ini menghasilkan return value yaitu index
+// Perulangan ini menghasilkan return value yaitu
 
 const names = {
     firstname : 'Farhan',
