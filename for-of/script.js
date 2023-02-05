@@ -1,4 +1,4 @@
-// Menggunakan for of 
+// Menggunakan function
 
 // Perulangan ini hanya bisa dipakai di perulangan iterable
 
