@@ -1,23 +1,20 @@
-// Membuat Array
-const Array = []
-const name = ["Farhan", "Yp", "Farhan Yp"]
+// Membuat Consturctor Function
+// Menggunakan parameter
+function Person(firstname, middlename,lastname){
+    // Membuat property 
+    this.firstname = firstname
+    this.middlename = middlename
+    this.lastname = lastname
 
-// Memasukan data
-Array.push("masukan1")
-Array.push("masukan2")
-Array.push("masukan3")
-Array.push("masukan4")
+    // Membuat method
+    this.fullname= function(){
+        console.log(`${this.firstname} ${this.middlename} ${this.lastname}`)
+    }
+}
 
-// Melihat panjang array
-document.writeln(Array.length)
+// Membuat object Person
+const yp = new Person("yp1", "yp2", "yp3")
+yp.fullname()
 
-// Mengambil data array
-document.writeln(Array[1])
-
-// Mengganti data di array
-Array[3] = 'Ini diganti '
-
-// Menghapus data di array
-delete Array[1]
-
-console.table(Array)
+const farhan = new Person("Farhan","Yudha","Pratama")
+farhan.fullname()
