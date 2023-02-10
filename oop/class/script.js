@@ -2,8 +2,10 @@
 class Person{
     // Menambahkan Constructor
     constructor(name){
-        console.log(`Ini adalah constructor ${name}`)
+        // Menambahkan Property
+        this.name = name
     }
 }
 
 const yp = new Person("YP")
+console.log(yp.name)
