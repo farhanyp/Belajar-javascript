@@ -1,5 +1,6 @@
 // Membuat Class
 class Person{
+    // Menambahkan Constructor
     constructor(name){
         console.log(`Ini adalah constructor ${name}`)
     }
