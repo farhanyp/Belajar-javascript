@@ -1,15 +1,18 @@
-// Membuat public class field
+// Menggunakan static method
+// Static method biasanya digunakan sebagai utility
 
-class Person{
-    firstname
-    lastname
+class Math{
 
-    constructor(name1, name2){
-        this.firstname = name1
-        this.lastname = name2
+    static sum(...numbers){
+        let total = 0
+
+        for(const number of numbers){
+            total += number
+        }
+
+        return total
     }
+
 }
 
-const yp = new Person("farhan", "Yudha")
-console.log(yp.firstname)
-console.log(yp.lastname)
+console.log(Math.sum(1,1,1))
