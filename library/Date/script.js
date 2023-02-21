@@ -31,14 +31,25 @@
 }
 
 {
-    // Parsing data
-    // konversi dari string date ke timestamps
-    const timeString = "2023-2-21"
-    const parseTimestamp = Date.parse(timeString)
+    // // Parsing data
+    // // konversi dari string date ke timestamps
+    // const timeString = "2023-2-21"
+    // const parseTimestamp = Date.parse(timeString)
 
-    console.log(parseTimestamp)
+    // console.log(parseTimestamp)
+
+    // // konversi dari timestamps ke format date
+    // console.log(new Date(parseTimestamp))
     
-    // konversi dari timestamps ke format date
-    console.log(new Date(parseTimestamp))
-    
+}
+
+{
+    // getter and setter date
+
+    const time = new Date()
+    time.setFullYear("1997")
+
+    console.log(time.getFullYear())
+    console.log(time.getMonth())
+    console.log(time.getDate())
 }
