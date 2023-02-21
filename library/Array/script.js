@@ -50,12 +50,25 @@
 
 
 
-// Array Filter
+// // Array Filter
+// const numbers = [1,2,3,4,5,6,7,8,9,10]
 
-const numbers = [1,2,3,4,5,6,7,8,9,10]
+// const ganjil = numbers.filter(value => value % 2 == 1)
+// const genap = numbers.filter(value => value % 2 == 0)
 
-const ganjil = numbers.filter(value => value % 2 == 1)
-const genap = numbers.filter(value => value % 2 == 0)
+// console.log(ganjil)
+// console.log(genap)
 
-console.log(ganjil)
-console.log(genap)
+
+
+// Array Transform
+// const name = ["farhan", "yudha", "pratama"]
+// const nameUpper = name.map(value => value.toUpperCase())
+// console.log(nameUpper)
+
+
+// const namereduce = name.reduce((before, after) => before + " " + after)
+// console.log(namereduce)
+
+// const nameReduceRight = name.reduceRight((before, after) => before + " " + after)
+// console.log(nameReduceRight)
