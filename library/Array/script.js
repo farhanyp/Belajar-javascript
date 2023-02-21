@@ -27,3 +27,13 @@
 
 
 // Pengunaan Stack
+const name = []
+
+name.push("farhan")
+name.push("Yudha")
+name.push("Pratama")
+
+console.log(name.pop())
+console.log(name.pop())
+console.log(name.pop())
+console.log(name.pop())
