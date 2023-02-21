@@ -37,3 +37,15 @@ console.log(name)
 
     console.log(name1)
 }
+
+{
+    // Menggunakan get properties dan get names
+
+    const name = {
+        firstname : "farhan",
+        lastname : "yp"
+    }
+
+    console.log(Object.values(name))
+    console.log(Object.getOwnPropertyNames(name))
+}
