@@ -20,3 +20,20 @@ delete name.lastname
 console.log(name)
 
 }
+
+{
+    // Menggunakan Object.assign
+
+    const name1 = {
+        firstname: "farhan"
+    }
+
+    const name2 = {
+        lastname: "yp"
+    }
+
+    // Menggabungkan 2 object
+    Object.assign(name1, name2)
+
+    console.log(name1)
+}
