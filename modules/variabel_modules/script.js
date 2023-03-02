@@ -1,4 +1,4 @@
 // Import
-import name from "./library.js"
+import {name} from "./library.js"
 
 console.log(name)
