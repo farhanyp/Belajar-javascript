@@ -1,8 +1,7 @@
-// namedNodeMap
+// textNode
 
-const text = document.getElementById('text')
-const attributes = text.attributes
+// const text = document.body.firstChild
 
-for(let attribute of attributes){
-    console.log(`name: ${attribute.name},  value: ${attribute.value}`)
-}
+// const text = document.createTextNode("ini text node")
+
+// document.body.appendChild(text)
