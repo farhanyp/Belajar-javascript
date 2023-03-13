@@ -1,79 +1,81 @@
-// array untuk menyimpan data
+// Variabel untuk menampung data todolist
 const todolistValue = []
 
-// Menangkap Table Body
+// Menangkap body table
 const todolistBody = document.getElementById('todolistBody')
 
-// Menampilkan data sesuai filtering
-filter.onkeydown = function(){
-    getTodolist()
-}
-filter.onkeyup = function(){
-    getTodolist()
+// Menghapus data
+function deleteTodolist(index){
+    todolistValue.splice(index, 1)
+    displayTodolist()
 }
 
-// Clear data todolist
+// Clear data sebelum ditampilkan
 function clearTodolist(){
     while(todolistBody.firstChild){
         todolistBody.removeChild(todolistBody.firstChild)
     }
 }
 
-// Remove todolist
-function removeTodolist(index){
-    todolistValue.splice(index, 1)
-    getTodolist()
-}
-
-// Menampilkan data todolist ke halaman
-function showTodolistToHTML(index, todo){
-    // Membuat tr
+// Create elemen untuk di tampilkan ke halaman
+function createDataTodolist(index){
     const tr = document.createElement('tr')
-    todolistBody.appendChild(tr)
+        todolistBody.appendChild(tr)
 
-    //Membuat td Button
-    const tdButton = document.createElement('td')
-    const button = document.createElement('input')
-    button.type= 'button'
-    button.value = 'Done'
-    button.onclick = function(){
-        removeTodolist(index)
-    }
-    tr.appendChild(tdButton)
-    tdButton.appendChild(button)
+        const tdButton = document.createElement('td')
+        tr.appendChild(tdButton)
 
-    // Membuat td todolist
-    const tdValue = document.createElement('td')
-    tdValue.textContent = todo
-    tr.appendChild(tdValue)
+        const button = document.createElement('input')
+        button.type = 'button'
+        button.value = 'Done'
+        button.onclick = function(){
+            deleteTodolist(index)
+        }
+        tdButton.appendChild(button)
+
+        const tdValue = document.createElement('td')
+        tdValue.textContent = todolistValue[index]
+        tr.appendChild(tdValue)
 }
 
-// mengambil data dari array
-function getTodolist(){
+// Menampilkan data ke halaman
+function displayTodolist(){
 
     clearTodolist()
 
-    for(let i = 0; i < todolistValue.length; i++){
-        const todo = todolistValue[i]
+    for (let i = 0; i < todolistValue.length; i++) {
+        
+        // Menangkap input search
+        const search = document.getElementById('search').value.toLowerCase()
 
-        // Filter data sebelum ditampilkan
-        const filter = document.getElementById('filter').value.toLowerCase()
-        if(todo.toLowerCase().includes(filter)){
-            showTodolistToHTML(i, todo)
+        if(todolistValue[i].toLowerCase().includes(search)){
+            createDataTodolist(i)
         }
+
+
     }
 }
 
 // Menangkap data todolist
-document.forms['todolistForm'].onsubmit = function(event){
-    event.preventDefault()
+document.forms['todolistForm'].onsubmit = function(e){
+    e.preventDefault()
 
     const todo = document.forms['todolistForm']['todolist'].value
-    todolistValue.push(todo)
+    todolistValue.push (todo)
 
     document.forms['todolistForm'].reset()
 
-    getTodolist()
+    displayTodolist()
+
 }
+
+search.onkeydown = function (){
+    displayTodolist()
+}
+
+search.onkeyup = function (){
+    displayTodolist()
+}
+
 
 
