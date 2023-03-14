@@ -1,6 +1,5 @@
 // Json
 // Get Data Json
-
 const ajax = new XMLHttpRequest();
 ajax.open("GET", "ajax/hello.json")
 ajax.addEventListener('load', function(){
